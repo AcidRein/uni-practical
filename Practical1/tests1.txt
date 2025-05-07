@@ -1,0 +1,16 @@
+– Test Case 1
+Input: 3, 3, 3
+
+output:
+27
+
+– Test Case 2
+Input: 1, 1, 1
+
+Output: 
+1
+
+– Test Case 3
+Input: 14, 20, 40
+
+Output: 11200

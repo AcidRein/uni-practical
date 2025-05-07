@@ -1,0 +1,35 @@
+– Test Case 1
+Input: 300000, 100
+
+What is the population?: 300000
+How much Litres of water is used person?: 100
+The Desalination Capacity can cover all 100.00% of the daily water use
+
+– Test Case 2
+Input: 600000, 100
+
+What is the population?: 600000
+How much Litres of water is used person?: 100
+The daily water usage is 100.00% Over the limit and the excess can't be covered
+
+– Test Case 3
+Input: 51023, 50
+
+What is the population?: 51023
+How much Litres of water is used person?: 50
+The Desalination Capacity can cover all 8.50% of the daily water use
+
+– Test Case 4
+Input: 98481, 274
+
+What is the population?: 98481
+How much Litres of water is used person?: 274
+The Desalination Capacity can cover all 89.95% of the daily water use
+
+– Test Case 5
+Input: 85427, 4689
+
+What is the population?: 85427
+How much Litres of water is used person?: 4689
+The daily water usage is 1235.22% Over the limit and the excess can't be covered
+
