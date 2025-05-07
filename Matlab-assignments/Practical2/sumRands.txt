@@ -1,0 +1,13 @@
+-- Random Integers Test description--
+With 5 random Integers between 1-10 inclusive, 
+
+The Maximum sum occurs when all 5 Integers are equal to 10:
+Maximum Value = 50
+
+The Minimum sum occurs when all 5 Integers are equal to 1:
+Minimum Value = 5
+
+By running 1000 simulations of the sums of 5 random Integers,
+The average sum was ~= 27.5
+
+(Set 'FINDAVERAGE = true' to run this simulation)

@@ -1,0 +1,17 @@
+-- Test 1 -- 
+% Basic
+years = [0:33];
+Output:
+0 4 8 12 16 20 24 28 32
+
+-- Test 2 --
+% Floats
+years = [1000:0.5:1033];
+Output:
+1000 1004 1008 1012 1016 1020 1024 1028 1032
+
+-- Test 3 --
+% Big gap years
+years = [2105:5:2150];
+Output:
+2120 2140

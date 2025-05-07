@@ -1,0 +1,24 @@
+clear
+clc
+%% Get 5 heights, put it in a vector and re-display the height 
+
+% Define an empty vector
+myVector = [];
+
+% For loop for up to 5 inputs
+for i = 1:5
+    % Get user input
+    userInput = input('enter height: ', 's');
+    % Keep prompting user until a valid input is received
+    while isnan(str2double(userInput))
+        fprintf('Please enter a valid number\n');
+        userInput = input('enter height: ', 's');
+    end
+    % set the 'i'th vector to the user's input
+    myVector(i) = str2double(userInput)
+end
+
+% Display all vectors  in 'myVector'
+for i = 1:length(myVector)
+    disp(myVector(i));
+end
