@@ -1,0 +1,18 @@
+– Test Case 1
+Input: 1
+
+What is the population?: 1
+The average water usage per day with a population of 1 is 0.27 KLitres
+
+– Test Case 2
+Input: 956
+
+What is the population?: 956
+The average water usage per day with a population of 956 is 261.94 KLitres
+
+– Test Case 3
+Input: -39
+
+What is the population?: -39
+The average water usage per day with a population of -39 is -10.69 KLitres
+

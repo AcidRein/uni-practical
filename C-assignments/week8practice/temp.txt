@@ -1,0 +1,19 @@
+// Positive Integers
+Input: 40
+Output: 40 degree celcius is 104 in fahrenheit
+
+// Zero
+Input: 0
+Output: 0 degree celcius is 32 in fahrenheit
+
+// Negative Integers
+Input: -50 
+Output: -50 degree celcius is -58 in fahrenheit
+
+// Floating points
+Input: 12.34
+Output: 12 degree in celcius is 54 in fahrenheit
+
+// Invalid Numbers
+Input: abc
+Output: 0 degree celcius is 32 in fahrenheit

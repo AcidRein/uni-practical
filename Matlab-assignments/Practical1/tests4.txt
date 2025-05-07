@@ -1,0 +1,55 @@
+-- Test case 1
+(NUMBER) What is the population of your city?: 99
+(NUMBER) Percentage of people who owns a car (x%): 1
+(NUMBER) How much do you charge for Car Services? (daily): $30.12
+(NUMBER) How much do you charge for Car Registration? (daily): $35.99
+You have a Population of 99, with 1 people owning a car (rounded up).
+With car owners paying the following fees:
+Car Service Fee: $30.12
+Car Registration Fee: $35.99
+Fuel Cost: $14.04
+Car Insurance Fee: $4.52
+Car Loan Fee: 22.28
+The total cost of transport for all car owners is given by the amount: $106.95
+
+-- Test case 2
+(NUMBER) What is the population of your city?: 1524
+(NUMBER) Percentage of people who owns a car (x%): 64.3
+(NUMBER) How much do you charge for Car Services? (daily): $12.32
+(NUMBER) How much do you charge for Car Registration? (daily): $10
+You have a Population of 1524, with 980 people owning a car (rounded up).
+With car owners paying the following fees:
+Car Service Fee: $12.32
+Car Registration Fee: $10.00
+Fuel Cost: $14.04
+Car Insurance Fee: $4.52
+Car Loan Fee: 22.28
+The total cost of transport for all car owners is given by the amount: $61896.80
+
+-- Test case 3
+(NUMBER) What is the population of your city?: 30031
+(NUMBER) Percentage of people who owns a car (x%): 99.9
+(NUMBER) How much do you charge for Car Services? (daily): $103
+(NUMBER) How much do you charge for Car Registration? (daily): $150
+You have a Population of 30031, with 30001 people owning a car (rounded up).
+With car owners paying the following fees:
+Car Service Fee: $103.00
+Car Registration Fee: $150.00
+Fuel Cost: $14.04
+Car Insurance Fee: $4.52
+Car Loan Fee: 22.28
+The total cost of transport for all car owners is given by the amount: $8815493.84
+
+-- test case 4
+(NUMBER) What is the population of your city?: 99123913
+(NUMBER) Percentage of people who owns a car (x%): 100
+(NUMBER) How much do you charge for Car Services? (daily): $0
+(NUMBER) How much do you charge for Car Registration? (daily): $0
+You have a Population of 99123913, with 99123913 people owning a car (rounded up).
+With car owners paying the following fees:
+Car Service Fee: $0.00
+Car Registration Fee: $0.00
+Fuel Cost: $14.04
+Car Insurance Fee: $4.52
+Car Loan Fee: 22.28
+The total cost of transport for all car owners is given by the amount: $4048220606.92
