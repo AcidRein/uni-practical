@@ -1,0 +1,15 @@
+Test 1 (Basic Test)
+input                   
+10 30 4 12 1 -1      
+
+Maximum: 30
+Minimum: 1
+Average: 11.0
+
+Test 2 (10+ Elements)
+input 
+30 40 50 30 20 55 11 392 -14 39 20 12 13 1 149
+
+Maximum: 55
+Minimum: 11
+Average: 32.0
