@@ -1,0 +1,22 @@
+======================================
+Test 1 (Practical input)
+Input:
+bob.The.Builder
+
+output
+BOB.THE.BUILDER
+======================================
+Test 2 (Practical Input 2 [more than 20 characters input])
+Input:
+Jennifer and, Joe,Smith
+
+Output:
+JENNIFER AND, JOE,SM
+======================================
+Test 3 (Special Characters)
+Input:
+abc123!@#*&..,,deFgH
+
+Output:
+ABC123!@#*&..,,DEFGH
+

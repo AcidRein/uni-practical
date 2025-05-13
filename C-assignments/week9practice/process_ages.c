@@ -12,8 +12,8 @@ int main(void) {
     printf("Enter your age [%d]: ", userAgeIndex);
     returnValue = scanf("%d", &userAgeInput);
 
-    if (returnValue != 1) {
-      printf("Enter a valid number!\n");
+    if (returnValue != 1) {  // If unsuccessfully unsigned, re-prompt
+      printf("Enter a valid number! Try again\n");
       scanf(" %c", &buffer);
       continue;
     }
@@ -34,7 +34,8 @@ int main(void) {
     // Find min/max age
     if (userAgeInput > maxAge) {
       maxAge = userAgeInput;
-    } else if (userAgeInput < minAge) {
+    }
+    if (userAgeInput < minAge) {
       minAge = userAgeInput;
     }
 
@@ -42,7 +43,7 @@ int main(void) {
     ageSum = ageSum + userAgeInput;
   }
 
-  float averageAge = ageSum / userAgeIndex;
+  float averageAge = ((float)ageSum) / ((float)userAgeIndex);
   printf("\nMaximum: %d\nMinimum: %d\nAverage: %.1f\n", maxAge, minAge,
          averageAge);
 

@@ -1,0 +1,21 @@
+======================================
+Test 1 (Practical input)
+Input:
+jennifer
+
+output
+JENNIFER
+======================================
+Test 2 (commas)
+Input: 
+joe,smith
+
+Output:
+JOE,SMITH
+======================================
+Test 3 (special characters)
+Input:
+j4n3.d03,iS!cOoL
+
+Output:
+J4N3.D03,IS!COOL

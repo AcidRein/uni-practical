@@ -1,0 +1,22 @@
+===================================
+Test 1 (Basic test)
+Input:
+Hello World!
+
+Output
+!dlroW olleH
+===================================
+Test 2 (Character limit)
+Input:
+
+napS,timE,dessertS,RacecaR,staR 
+
+Output:
+R,Stressed,Emit,Span
+===================================
+Test 3 (Specia Characters)
+Input:
+Th1s_l3v31+is HARD
+
+Output:
+DRAH si+13v3l_s1hT
