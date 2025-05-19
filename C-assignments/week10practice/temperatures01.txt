@@ -1,0 +1,12 @@
+Test case 1, basic input
+Input: 5 14 2.3 10.3232 -13 7.0
+Output: 7.0 -13.0 10.3 2.3 14.0
+
+Test case 2, no input
+Input: 0
+Output: 
+
+Test case 3, too much input
+
+Input: 2 1 2 3 4 5
+Output: 2.0 1.0

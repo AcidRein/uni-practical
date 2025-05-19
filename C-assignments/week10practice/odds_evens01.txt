@@ -1,0 +1,17 @@
+Test case 1, basic input
+Input: 9 3 4 5 6 9 1 2 8 2
+Output: 3 5 9 1
+4 6 2 8 2
+
+Test case 2, basic input
+Input 10 1 -1 2 -2 3 -3 4 -4 5 -5
+Output: 1 -1 3 -3 5 -5
+2 -2 4 -4
+
+Test case 3, No input
+Input: 0
+Output: 
+
+Test case 4, negative nums
+Input: -5
+Output: (no errors)
