@@ -1,8 +1,0 @@
--- Describe shape of Graph --
-since vector B is the cubed result of A, the graph of B should 
-look similar to and have same features as the default cubic function 'x^3', 
-where it starts from the bottom, has two inflection points, and increases to infinity
-
-as vector C is the result of 2^(A(i)), and vector A starts from -10 increasing at .5 interval til 10,
-We can expect the graph of C to start at a very small y-value, then increases as A(i) increases.
-This would look like an exponential graph.
