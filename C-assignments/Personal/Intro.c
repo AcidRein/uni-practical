@@ -93,6 +93,7 @@ int main(void) {
     // && Logical AND
     // || Logical OR
     // ! Logical NOT
+    // (THERE IS NO POWER SIGN LIKE ** IN PYTHON)
     
     // Note, when dividing, use decimals to get decimal numbers. 
     // (1 / 2 = 0) WHERE (1.0 / 2.0 = 0.5)
