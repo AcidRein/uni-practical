@@ -1,17 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int values_under_100(int arr[], int arrSize) {
-    int count = 0;
-    for (int i = 0; i < arrSize; i++) {
-        if (arr[i] < 100) {
-            count++;
+/*
+Write a function that takes two arguments: an array of integers and the size of this array. The function should then return how many values in the array are less than 100.
+*/
+
+int values_under_100(int values[], int size) {
+    int counter = 0;
+    for (int i = 0; i < size; i++) {
+        if (values[i] < 100) {
+            counter++;
         }
     }
 
-    return count;
+    return counter;
 }
+
+/*
 int main(void) {
+    // Taken from the example except for the function
     int values[6]={-1,200,400,5,-3,600};
     int size=6;
 
@@ -22,3 +29,4 @@ int main(void) {
 
     return 0;
 }
+*/

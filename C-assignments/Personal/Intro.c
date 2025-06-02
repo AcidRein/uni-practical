@@ -3,6 +3,10 @@
 // Compile with gcc {FILE_NAME1}.c -o {FILE_NAME2}
 // Run code with ./{FILE_NAME2}
 
+// =======================
+// Compile all solutions with | gcc -Wall -Werror=vla -std=c11 {filename} |
+// =======================
+
 int main(void) {
     // Variable types
     int var1 = 5;
