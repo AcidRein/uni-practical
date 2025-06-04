@@ -3,13 +3,15 @@
 #include <time.h>
 
 int main(void) {
-    int seed = time(0);
-    srand(seed);
+    // Generate random seed given a time (we need time to randomize the seed)
+    srand(time(NULL));
+    // Get a random 'garbage' value
+    // Formula for random range: int randomVar = [rand() % (max - min + 1) + min]
+    int randomNum = rand();
+    printf("Random: %d\n", randomNum);
 
-    for (int i = 0; i < 100; i++) {
-        int randomNum = rand();
 
-        printf("Random: %d\n", randomNum);
-    }
+
+    return 0;
     
 }
