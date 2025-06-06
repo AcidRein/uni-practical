@@ -31,7 +31,7 @@ int main(void) {
     //  ================== Simulation configs =====================
     // This simulation runs on O(n*m) time
     // where n = numberOfSimualtions, m = numThrows
-    int numThrows = 4; // simulate up to x throws before busting
+    int numThrows = 6; // simulate up to x throws before choosing to stop
     int numberOfSimulations = 100000000; // how many simulations
     // ==========================================================
     // Result of a "numThrows = 4" and "numberOfSimulations = 100,000,000" simulation output:
@@ -75,7 +75,8 @@ int main(void) {
             // Choose a random "available" progression
             bool successfulProgression = false; // True if progression was able to be made, otherwise busted.
             for (int i = 0; i < 3; i++) {
-                pair<int, int> randomProgression = progressionList[rand() % progressionList.size()];
+                // chose a random progression
+                pair<int, int> randomProgression = progressionList[rand() % progressionList.size()]; 
                 
                 auto firstProgressionRunner = std::find(currentRunners.begin(), currentRunners.end(), randomProgression.first);
                 auto secondProgressionRunner = std::find(currentRunners.begin(), currentRunners.end(), randomProgression.second);
@@ -99,14 +100,21 @@ int main(void) {
                 // If neither runner was found
                 if ((firstProgressionRunner == currentRunners.end()) && (secondProgressionRunner == currentRunners.end())) {
                     vector<int> choices = {randomProgression.first, randomProgression.second};
-                    // if there's an avaiable runners to be placed
-                    if (currentRunners.size() < 3) {
+                    // if there's more than two avaiable runners to be placed
+                    if (currentRunners.size() < 2) {
+                        currentRunners.push_back(randomProgression.first);
+                        currentRunners.push_back(randomProgression.second);
+                        currentBoard[randomProgression.first]--;
+                        currentBoard[randomProgression.second]--;
+                        successfulProgression = true;
+                    } else if (currentRunners.size() == 2) { // there's exactly 1 spot
                         // Otherwise if there's only 1 slot, choose a random progression to be made
                         int choices2 = choices[rand() % choices.size()];
                         currentRunners.push_back(choices2);
                         currentBoard[choices2]--;
                         successfulProgression = true;
                     }
+
                 } 
                 
                 if (successfulProgression) { // If progression was successful, stop choosing. Otherwise, go throw all the options
@@ -125,19 +133,18 @@ int main(void) {
     }
     
     cout << "Number of Simulations: " << numberOfSimulations << endl;
-    cout << "Number of throwns simulated: " << numThrows << endl;
-    cout << "---Result of Simulation --- (Note, the ith rounds is equivalent to the ith throw)" << endl;
+    cout << "Number of throws simulated: " << numThrows << endl;
+    cout << "---Result of Simulation ---" << endl;
+
+    double cumulativeBustProbability = 0.0;
+
+    // Print our probability at the end
     for (int i = 0; i < numThrows; i++) {
-        cout << "Reached R" << i+1 << " " << bustPlays[i].first << " times. Busted On R" 
-        << i+1 << " " << bustPlays[i].second << " times. Probability of busting on current Round: " 
-        << (double)bustPlays[i].second / bustPlays[i].first 
-        << ", Probability of reaching current round: " 
-        << (double)bustPlays[i].first / numberOfSimulations 
-        << ", Probability of busting on current round: " 
-        << (double)bustPlays[i].second / numberOfSimulations << endl;
+        double roundBustProbability = (double)bustPlays[i].second / numberOfSimulations;
+        cumulativeBustProbability += roundBustProbability;
+
+        cout << fixed << setprecision(2); // Format percentages
+        cout << (cumulativeBustProbability * 100) << "% of games bust by round " << i+1 << endl;
     }
-
     return 0;
-    
-
 }

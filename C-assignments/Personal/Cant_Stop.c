@@ -46,7 +46,7 @@ int main(void) {
    double probabilityOfAdvancing = success/gameTime;
    double probabilityOfBusting = failure/gameTime;
    printf("Numbers of Simulations ran: %d\n", gameTime);
-   printf("Numbers of Advances available: %.0lf\nNumbers of Failures available: %.0lf\n", success, failure);
+   printf("Numbers of Advances recorded: %.0lf\nNumbers of Failures recorded: %.0lf\n", success, failure);
    printf("Probability of Advancing: %lf\nProbability of Busting: %lf\n", probabilityOfAdvancing, probabilityOfBusting);
 
    return 0;
