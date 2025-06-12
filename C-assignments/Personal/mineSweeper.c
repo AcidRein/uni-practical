@@ -4,7 +4,7 @@
 
 void printDivider(int len) {
     // Print divider
-    for (int i = 0; i < len * 2; i++) {
+    for (int i = 0; i < (len * 2)+1; i++) {
         printf("=");
     }
     printf("\n");
@@ -13,10 +13,35 @@ void printDivider(int len) {
 // Printing mines
 void printMap(unsigned short** playerBoard, short ** mineMap, int rowSize, int colSize, unsigned short hidden) {
     printDivider(colSize);
+    unsigned short columnLabel = 0, rowLabel = 0;
 
     // print • (bullet, 149) if hidden, print · if blank, print @ if bomb, else print num
-    for (int r = 0; r < rowSize; r++) {
-        for (int c = 0; c < colSize; c++) {
+    for (int r = -1; r < rowSize; r++) {
+        for (int c = -1; c < colSize; c++) {
+
+            // Printing helpful labels (thanks for the idea)
+            if (r == -1 && c == -1) {
+                printf("X ");
+                continue;
+            }
+            if (r == -1) {
+                printf("%hu ", columnLabel);
+                columnLabel++;
+                if (columnLabel > 9) {
+                    columnLabel = 0;
+                }
+                continue;
+            }
+            if (c == -1) {
+                printf("%hu ", rowLabel);
+                rowLabel++;
+                if (rowLabel > 9) {
+                    rowLabel = 0;
+                }
+                continue;
+            }
+
+            // Printing main game
             if (playerBoard[r][c] == 0 && hidden == 1) { // If hidden from player, continue.
                 printf("• ");
                 continue;
@@ -148,8 +173,8 @@ int main(void) {
     srand(time(0));
 
     // Game Config =============
-    int numMines = 20;
-    int rowSize = 8, columnSize = 20;
+    int numMines = 10;
+    int rowSize = 10, columnSize = 10;
     // =========================
 
     // Board generation

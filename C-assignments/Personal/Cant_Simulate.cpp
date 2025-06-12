@@ -32,7 +32,7 @@ int main(void) {
     // This simulation runs on O(n*m) time
     // where n = numberOfSimualtions, m = numThrows
     int numThrows = 6; // simulate up to x throws before choosing to stop
-    int numberOfSimulations = 100000000; // how many simulations
+    int numberOfSimulations = 1000000; // how many simulations
     // ==========================================================
     // Result of a "numThrows = 4" and "numberOfSimulations = 100,000,000" simulation output:
     
