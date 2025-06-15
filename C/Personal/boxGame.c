@@ -11,7 +11,6 @@ unsigned short botTurn(unsigned short* arrayBox, unsigned short numBoxes) {
     // Objective, try combinations to have numBoxes % 3 == 0
     // Count how many boxes are left
     unsigned short boxLeft = 0;
-    unsigned short botRando = (rand() % 2) + 1;
 
     for (int i = 0; i < numBoxes; i++) {
         if (arrayBox[i] == 0) {
@@ -25,7 +24,8 @@ unsigned short botTurn(unsigned short* arrayBox, unsigned short numBoxes) {
         } else if ((boxLeft - 2) % 3 == 0) {
             return 2;
         }
-    } else { // Not optimise way to win unless opponent mistakes. just make a waiting move
+    } else { // No optimised way to win unless opponent mistakes. just make a waiting move
+        unsigned short botRando = (rand() % 2) + 1;
         return botRando;
     }
 
