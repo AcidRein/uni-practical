@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
+#include <stdbool.h>
 
 // There's no built-in C maps/hash so no O(1) lookups.
 // I guess we'll have to loop through all decision table *EVERY SEARCH* >:(
@@ -54,6 +55,8 @@ unsigned int* removeElementFromHeap(unsigned int* mainArray, unsigned int arrayS
 
     return newReturnArray2;
 }
+
+// ======================== Save and load function here ==================================
 
 // ==================== Board Game Config ==========================
 // Create new tic tac toe board
@@ -369,10 +372,9 @@ char botPlay(char** board, struct botMind** botDecisionTable, unsigned int* deci
 struct botMind* trainBot(unsigned int simulations, unsigned int* bot1Wins, unsigned int* bot2Wins, unsigned int* bot1TableSize, unsigned int* bot2TableSize, unsigned int* bot1MaxSize, unsigned int* bot2MaxSize) {
     // ======== Create 2 minds to go against each other
     // Allows for Decision making based on boardType. Think of this as the brain, and each struct botMind as a neural link.
-    struct botMind* bot1DecisionTable = malloc(*bot1MaxSize * sizeof(struct botMind)); 
+    struct botMind* bot1DecisionTable = malloc(*bot1MaxSize * sizeof(struct botMind)); // create new memory
 
-    // Create a secondary bot to train
-    struct botMind* bot2DecisionTable = malloc(*bot2MaxSize * sizeof(struct botMind)); 
+    struct botMind* bot2DecisionTable = malloc(*bot2MaxSize * sizeof(struct botMind));     
 
     char bot1Position, bot2Position, whoPlays; // Which player is X or O?
     unsigned int bot1Value, bot2Value; // The play the bot wants to make. 2 digit number, 1-indexed
@@ -484,7 +486,10 @@ struct botMind* trainBot(unsigned int simulations, unsigned int* bot1Wins, unsig
 // == Main == 
 int main(void) {
     // ==== Sim configs ====
-    unsigned int simulations = 1000000; // A good number is 1000000 (1,000,000)
+    unsigned int simulations = 1000000; 
+    // Easy mode - Simulations 100k (100000) or under
+    // Medium - Simulations 1M (1000000)
+    // Hard (or impossible, idk) - Simulations 10M+ (10000000)
     unsigned int gamesToPlay = 3; // How many games you want to play with the bot after it has learnt?
     // ====================
 
@@ -615,7 +620,7 @@ int main(void) {
         }
 
     }
-    
+
 
     // Free bot memory
     for (int i = 0; i < *winnerBotTableSize; i++) {
